@@ -11,7 +11,10 @@
       "Bash(git add *)",
       "Bash(git commit *)",
       "Bash(git branch *)",
-      "Bash(git remote *)"
+      "Bash(git remote *)",
+      "Bash(mv g/pic/Mingqian_Feng.JPG g/pic/Mingqian_Feng.jpg)",
+      "Bash(git push *)",
+      "Bash(git mv *)"
     ]
   }
 }
