@@ -400,6 +400,11 @@ table.w3-table-all { font-size: 0.88rem; }
     top: -1px;
 }
 
+/* ── Venue badge colors ───────────────────────────────── */
+.venue-badge.venue-journal  { background: #2a7d4f; }
+.venue-badge.venue-workshop { background: #777; }
+.venue-badge.venue-other    { background: #4a5568; }
+
 /* ── Highlighted author name ──────────────────────────── */
 .me {
     font-weight: 700;

@@ -1009,6 +1009,21 @@ Luowei Zhou, <span class="me">Chenliang Xu</span>, Parker Koch, and Jason J. Cor
     bar.appendChild(makeRow('Venue', TOP_VENUES, v => selVenue = v));
     bar.appendChild(makeRow('Topic', TOPICS,     v => selTopic = v));
 })();
+
+// ── Venue badge coloring ──────────────────────────────────
+(function() {
+    const JOURNALS  = new Set(['TCSVT','TMM','IJCV','TASLP','TISMIR','JOV','IJSC','JCP',
+                                'npj Computational Materials','Chemical Science']);
+    const WORKSHOPS = new Set(['Workshop','ACMMMW']);
+    const TOP_CONF  = new Set(['CVPR','ICCV','ECCV','NeurIPS','ICLR','ICML','AAAI',
+                                'SIGGRAPH','SIGGRAPH Asia','ACM MM','UIST']);
+    document.querySelectorAll('.venue-badge').forEach(el => {
+        const v = el.textContent.trim();
+        if (JOURNALS.has(v))       el.classList.add('venue-journal');
+        else if (WORKSHOPS.has(v)) el.classList.add('venue-workshop');
+        else if (!TOP_CONF.has(v)) el.classList.add('venue-other');
+    });
+})();
 </script>
 </body>
 </html>
