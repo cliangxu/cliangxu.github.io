@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Spring 2025 - CSC 249/449 Machine Vision</title>
+    <style>
+    table {
+        width: 100%;
+    }
+    th, td {
+        border: 1px solid black;
+        text-align: center;
+    }
+    td {
+        font-size:90%;
+    }
+    </style>
+</head>
+
+<body class="w3-content">
+<script src="../../nav.js"></script>
+
+<div class="w3-container w3-margin-top">
+
+    <h3 class="w3-center">Spring 2025 - CSC 249/449: Machine Vision</h3>
+
+    <h4>Basic Information</h4>
+
+    <p>
+    <b>Meet Time/Location:</b> T/R 09:40-10:55 in Gavett 202</a><br>
+    </p>
+
+    <p>
+    <b>Instructor:</b> <a href="../../index.html" style="text-decoration:none">Prof. Chenliang Xu</a><br>
+    <b>Instructor's Office Hours:</b> Tue 2:00-4:00 pm in Wegmans 3005</a>
+    </p>
+
+    <p><b>TAs and Office Hours:</b>
+    <ul>
+        <li><a href="https://yunlong10.github.io">Yunlong Tang</a>, Mon 2:00-3:00 pm in Wegmans 3211</li>
+        <li><a href="https://fmmarkmq.github.io">Mingqian Feng</a>, Thu 4:45-5:45 pm in Wegmans 3002</li>
+    </ul>
+    </p>
+
+    <p><b>Information Flow:</b> We will use <b>Blackboard</b> to make announcements, host lecture notes/assignments, and submit/grade student work. The course ID is CSC249.1.SPRING2025ASE. We will use Blackboard's <b>Discussions</b> for class-related discussion and communication, so that you can get help fast from the teaching team and your fellow classmates. Don't hensitate to email me and the TAs if it is a personal matter. Finally, this <b>course website</b> containing the course schedule serves as a syllabus.
+
+    <p><b>Credit Hours:</b> This is a four-credit-hour course. The credit hours are met by weekly lectures (150 minutes), office hours, homework assignments, and the final course project.</p>
+
+    <hr>
+
+    <h4>Course Description</h4>
+    <p>Fundamentals of computer vision, including image formation, elements of human vision, low-level image processing, and pattern recognition techniques. Advanced topics include modern visual features, graphical models, model-based and data-driven approaches, and contextual inference, as well as illustrative examples of successes and challenges in applications. CSC 449, a graduate-level course, requires additional readings and assignments.</p>
+
+    <b>Rough Topic Outline:</b>
+    <ul>
+        <li><b>Image Formation and Multiple View Geometry:</b> camera models, camera calibration, image alignment, structure from motion </li>
+        <li><b>Features and Filters:</b> image transforms, linear filtering, edges, corners, image scale space, feature extraction, feature matching, optical flow</li>
+        <li><b>Segmentation and Fitting:</b> Gestalt principles, segmentation by clustering, image as graphs, robust fitting and RANSAC, Hough transform </li>
+        <li><b>Recognition:</b> feature learning, convolutional and recurrent neural networks, advanced CNN architectures, attention mechanisms, feature visualization, image classification, object detection, instance segmentation, scene parsing, image captioning, face recognition, style transfer, generative image models </li>
+    </ul>
+
+    <p>
+    <b>Course Objective:</b>
+    An introduction to computer vision. The course is designed as an upper-level elective for Computer Science undergraduate students and an AI-area breath course for graduate students. The students will develop a strong understanding of formulating and solving problems using computer vision.</p>
+
+    <p>
+    <b>Prerequisites:</b> MATH 161 and CSC 242; MATH 165 strongly recommended; in addition, you should be familiar with Python, which is used for all programming assignments. 
+    </p>
+
+    <p>
+    <b>CS Instructional Network:</b> The course programming assignments require you to have an account in the CS instructional network. You should test your code in the CS instructional network before submission as this is the environment we use to grade assignments. Follow this <a href="https://accounts.csug.rochester.edu/"><b>link</b></a> to request an account if you don't have one.
+    </p>
+
+    <hr>
+
+    <h4>Schedule</h4>
+
+    <p>
+    This is a <b>tentative</b> course schedule and is <b>subject to changes</b> over the term. <br>
+    </p>
+
+    <table>
+    <tr>
+        <th style="width:8%">Dates</th>
+        <th style="width:30%">Tuesday (T)</th>
+        <th style="width:30%">Thursday (R)</th>
+        <th style="width:17%">Assignments</th>
+        <th style="width:15%">Note</th>
+    </tr>
+
+    <tr>
+        <td>1/21,23</td>
+        <td>Introduction</td>
+        <td>Camera Models I</td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>1/28,30</td>
+        <td>Camera Models II</td>
+        <td>Linear Filtering</td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>2/4,6</td>
+        <td>Edges</td>
+        <td>Corners</td>
+        <td><b>PS-1 Out</b></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>2/11,13</td>
+        <td>SIFT</td>
+        <td><b>Programming Tutorial</b></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>2/18,20</td>
+        <td>Feature Matching and Image Alignment</td>
+        <td>Fitting I</td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>2/25,27</td>
+        <td>Fitting II</td>
+        <td>Dense Motion Estimate</td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>3/4,6</td>
+        <td>Visual Odometry</td>
+        <td>Segmentation</td>
+        <td><b>PS-1 Due</b></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>3/11,13</td>
+        <td style="background-color:gray;color:white">Spring Break</td>
+        <td style="background-color:gray;color:white">Spring Break</td>
+        <td><b>PS-2 Out</b></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>3/18,20</td>
+        <td>Learning Features I</td>
+        <td>Learning Features II</td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>3/25,27</td>
+        <td>Midterm Review</td>
+        <td><b>Midterm Exam</b></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>4/1,3</td>
+        <td><b>Course Project Discussion</b></td>
+        <td>Object Recognition I</td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>4/8,10</td>
+        <td>Object Recognition II</td>
+        <td>Face Recognition</td>
+        <td><b>PS-2 Due</b></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>4/15,17</td>
+        <td>Vision and Language I</td>
+        <td>Vision and Language II</td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>4/22,24</td>
+        <td>Generative Image Models I</td>
+        <td>Generative Image Models II<br>(in-person led by <a href="https://wikichao.github.io">Chao Huang</a>)</td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>4/29,5/1</td>
+        <td><b>Project Presentation I (Zoom)</b></td>
+        <td><b>Project Presentation II (Zoom)</b></td>
+        <td><b>Slides Due</b></td>
+        <td></td>
+    </tr>
+
+    </table>
+
+    <hr>
+
+    <h4>Course Work and Evaluation</h4>
+
+    <ul>
+
+        <li><b>Attendance and Participation (10%):</b> Throughout the term, we will have a few attendance takings. They are equally weighted. The instructor will note students who actively participate in class discussion. These together count 10% toward the final letter grade.</li>
+        <li><b>Exam (30%):</b> We will have an in-class midterm exam. It will have primarily multiple choice questions.</li>
+        <li><b>Problem Sets (30%):</b> There will be two problem sets (PS) over the term. They contain a mix of analytical and programming questions and are to be done independently by each student.</li>
+        <li><b>Course Project (30%):</b> Students will form groups with up to two members to implement a course project, which will generate a project report and a presentation at the end of the term.</li>
+
+    </ul>
+
+    <p><b>Late Work Policy:</b> Deduct 1% total score of the late assignment per hour passing the deadline. E.g., you submit PS-1 12 hours passing the deadline, then the max score you will get is 88%. We will not accept your submission after 72 hours over the deadline. All assignments should be submitted on Blackboard. You have plenty of time to do course assignments. Please arrange your time well; <b>no late work exceptions will be given</b>.</p>
+
+
+    <p><b>Regrading:</b> Any questions about the grading of a piece of work must be raised within one week of the date that the work was returned. In other words, if you do not pick up your work in a timely fashion, you may forfeit your right to question the grading of your work.</p>
+
+    <hr>
+
+    <h4>Textbook and Other Resources</h4>
+    <p>We will use the following textbook by Richard Szeliski. Please note that we will use the 2nd edition, which was recently updated with many new contents.</p>
+    <ul>
+        <li>Computer Vision: Algorithms and Applications, 2nd Edition, Szeliski, Springer, 2022 [<a href="http://szeliski.org/Book/">link</a>]</li>
+    </ul>
+    In addition, I recommend the following textbooks as supplementary reading. 
+    <ul>
+        <li>Computer Vision: A Modern Approach, 2nd Edition, Forsyth and Ponce, Pearson, 2012</li>
+        <li>Deep Learning, Goodfellow, Bengio and Courville, The MIT Press, 2016 [<a href="https://www.deeplearningbook.org/">link</a>]</li>
+    </ul>
+
+    <hr>
+
+    <h4>Other Policies</h4>
+
+    <p><b>Academic Honesty:</b> All assignments and activities associated with this course must be performed in accordance with the University of Rochester's Academic Honesty Policy. More information is available <a href="http://www.rochester.edu/college/honesty/">here</a>. You are expected to read, understand, and follow the policy. Additionally:
+    <ul>
+        <li><i>Homework:</i> Homework, unless otherwise denoted, is to be completed independently, and any forms of collaboration are strongly disencouraged.  You must <b>not retain</b> written notes from your conversations with other students, or share data via computer files to be used in completing your homework.</li>
+        <li><i>Course Project:</i> We do not allow double-dipping---a same or similar project being used in two or more courses or used for both research and course credits.</li>
+        <li><i>Large AI models:</i> Credit to source material or source technologies (DALL-E, ChatGPT, or similar) must be given regardless of whether the idea, phrase or other material is quoted directly, or whether a student subsequently paraphrases or summarizes into their own words. Overreliance on language from course material (assignment instructions, essay prompts, and so on), or overreliance on material generated by AI tools (Grammarly, ChatGPT, DALL-E, translation software, or similar)” constitutes plagiarism.</li>
+        <li><i>Online Materials:</i> You may look for the documentation, manuals, and tutorials for a programming language or library. You may study a systematic introduction and tutorial for a particular research topic or problem space. In all cases, you should cite the information sources. However, you <b>should not</b> intentionally search for homework solutions or solutions to any similar problems posted by past students or any others online. Failing to do so is a violation of academic honesty.</li>
+        <li><i>General Rule:</i> When in doubt, cite.</li>
+    </ul>
+
+    <p><u>Posting homework and project solutions to public repositories on sites like GitHub is a violation of the College’s Academic Honesty Policy, Section V.B.2 “Giving Unauthorized Aid.”</u></p>
+
+    <p><b>Disabilities:</b> Please see me about your required accommodations as early as possible in the term. The University of Rochester respects and welcomes students of all backgrounds and abilities. In the event you encounter any barrier(s) to full participation in this course due to the impact of a disability, please contact the Office of Disability Resources. The access coordinators in the Office of Disability Resources can meet with you to discuss the barriers you are experiencing and explain the eligibility process for establishing academic accommodations. You can reach the Office of Disability Resources at: disability@rochester.edu; (585) 276-5075; Taylor Hall; www.rochester.edu/college/disability.</p>
+
+</div>
+
+                        
+</body>
+</html>
+
+

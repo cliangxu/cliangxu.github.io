@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Chenliang Xu's Homepage @ University of Rochester</title>
+</head>
+
+<body class="w3-content w3-light-grey">
+<div class="w3-card-8 w3-white w3-margin-left w3-margin-right">
+<script src="../../nav.js"></script>
+
+<br>
+
+<div class="w3-container w3-center" style="padding-left:35px;padding-right:35px">
+    <h3>LIBSVX: A Supervoxel Library and Benchmark</h3>
+</div>
+
+<div class="w3-container" style="padding-left:35px;padding-right:35px">
+    <p><b>Primary Contributors:</b> <a href="../../index.html">Chenliang Xu</a> and <a href="//www.eecs.umich.edu/~jjcorso/">Jason J. Corso</a></p>
+
+    <p>
+        <b>Overview:</b> Images have many pixels; videos have more. Despite the strong potential of supervoxels to enhance video analysis and the successful usage of superpixel in many aspects of image understanding, supervoxels have yet to become mainstream in video understanding research. Two likely causes for this are (1) the lack of an available implementation for many supervoxels methods and (2) the lack of solid evaluation results or a benchmark on which to base the choice of one supervoxel method over another. In this project, we overcome both of these limitations: LIBSVX is a library of supervoxel and video segmentation methods coupled with a principled evaluation benchmark based on quantitative 3D criteria for good supervoxels.
+    </p>
+
+    <hr>
+
+    <p>
+        <b>What's new in LIBSVX 4.0?</b><br>
+        This release corresponds to our IJCV paper with new evaluation metrics. 
+    </p>
+
+    <p>
+        <b>What's new in LIBSVX 3.0?</b><br>
+        We include the method in our ICCV 2013 paper for flattening supervoxel hierarchies by the uniform entropy slice (UES). UES flattens a supervoxel hierarchy into a single segmentation such that it overcomes the limitations of trivially selecting an arbitrary level. It selects supervoxels in the hierarchy that balances the relative level of information in the final segmentation based on various post hoc feature criteria, such as motion, object-ness or human-ness. Three challenging video examples (with two actors in each) used in our ICCV 2013 paper are also included in this release. We also include bug-fixes in gbh, gbh_stream and swa.
+    </p>
+
+    <p>
+        <b>What's new in LIBSVX 2.0?</b><br>
+        The use of video segmentation as an early processing step in video analysis lags behind the use of image segmentation for image analysis, despite many available video segmentation methods. A major reason for this lag is simply that videos are an order of magnitude bigger than images; yet most methods require all voxels in the video to be loaded into memory, which is clearly prohibitive for even medium length videos. We address this limitation by proposing an approximation framework for streaming hierarchical video segmentation motivated by data stream algorithms: each video frame is processed only once and does not change the segmentation of previous frames. We implement the graph-based hierarchical segmentation method within our streaming framework; our method is the first streaming hierarchical video segmentation method proposed. This is the code we used in support of our ECCV 2012 paper.
+    </p>
+
+    <hr>
+
+    <p>
+        <b>Download code:</b> <a href="https://drive.google.com/file/d/1ITwVz2bvw37H7f7TqC6wUpOR9RwxgN2H/view?usp=share_link">LIBSVX v4.0 Beta</a>
+    </p>
+
+    <p>
+        <b>Archive Versions:</b>
+        <ul>
+            <li><a href="https://drive.google.com/file/d/1bfz9wU85C-uDUje6aiHNrDwLL9g2fKBL/view?usp=share_link">LIBSVX v3.0</a></li>
+            <li><a href="https://drive.google.com/file/d/1bfz9wU85C-uDUje6aiHNrDwLL9g2fKBL/view?usp=share_link">LIBSVX v2.0</a></li>
+            <li><a href="https://drive.google.com/file/d/1bfz9wU85C-uDUje6aiHNrDwLL9g2fKBL/view?usp=share_link">LIBSVX v1.0</a></li>
+        </ul>
+    </p>
+</div>
+
+</div>
+</body>
+</html>

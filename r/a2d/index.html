@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Actor-Action Video Understanding</title>
+</head>
+
+<body class="w3-content w3-light-grey">
+<div class="w3-card-8 w3-white w3-margin-left w3-margin-right">
+<script src="../../nav.js"></script>
+
+<br>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h3 class="w3-center"><b>Actor-Action Video Understanding</b></h3>
+</div> 
+
+<br>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>Overview of Goals and Challenges:</b></h4>
+    <div align="center">
+        <video style="width:100%;max-width:1080px" controls><source src="a2d.mp4" type="video/mp4"></video>
+    </div>
+    <p>Action is the heart of video understanding. As such, it has received a significant amount of attention in the last decade. The emphasis has moved from small datasets of a handful of actions to large datasets with many dozens of actions; from constrained domains like sporting to videos in-the-wild. However, existing works emphasize a small subset of the broader action understanding problem. First, they all assume the agent of the action, which we call the actor, is a human adult, ignoring the diversity of actions performed by other actors. Second, the prior literature largely focuses on action recognition, which is posed as the classification of a temporally pre-trimmed clip into one of k action classes from a closed-world setting. Here, we overcome both narrow viewpoints and introduces a new level of generality to the action understanding problem by considering multiple different classes of actors undergoing multiple different classes of actions. We are interested in simultaneously solving the set of 3W questions, namely, what action is happening, who is performing the action, and where is the action happening in space and time. We have developed various methods in advancing probabilistic graphical models to model actor-action interactions and have found that inference jointly over actors and actions outperforms inference independently over them. Our work has also enriched the scope of action understanding to consider temporally untrimmed long videos, adaptive video scales and weakly supervised learning setting.</p>
+</div>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>Related Publications:</b></h4>
+    <ol>
+        <li><a href="../../p/cvpr2020_wiseselect_paper.pdf"><b>Learning a weakly-supervised video actor-action segmentation model with a wise selection.</b></a> J. Chen, Z. Li, J. Luo, and C. Xu. <i>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2020</li>
+        <li><a href="https://link.springer.com/article/10.1007/s11263-019-01244-7"><b>A weakly supervised multi-task ranking framework for actor-action semantic segmentation.</b></a> Y. Yan, C. Xu, D. Cai, and J. J. Corso. <i>International Journal of Computer Vision (IJCV)</i>, 2019</li>
+        <li><a href="../../p/cvpr2017_a2cos_paper.pdf"><b>Weakly supervised actor-action segmentation via robust multi-task ranking.</b></a> Y. Yan, C. Xu, D. Cai and J. J. Corso. <i>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2017.</li>
+        <li><a href="https://arxiv.org/abs/1704.08723"><b>Action understanding with multiple classes of actors.</b></a> C. Xu, C. Xiong and J. J. Corso. <i>arXiv:1704.08723</i>, 2017.</li>
+        <li><a href="../../p/cvpr2016_a2s2_paper.pdf"><b>Actor-action semantic segmentation with grouping process models.</b></a> C. Xu and J. J. Corso. <i>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2016.</li> 
+        <li><a href="../../p/cvpr2015_a2d_paper.pdf"><b>Can humans fly? Action understanding with multiple classes of actors.</b></a> C. Xu, S.-H. Hsieh, C. Xiong and J. J. Corso. <i>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2015.</li>
+    </ol>
+</div> 
+
+<hr>
+
+</div>
+</body>
+</html>

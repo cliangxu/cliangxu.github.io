@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Lip Movement Generation</title>
+</head>
+
+<body class="w3-content w3-light-grey">
+<div class="w3-card-8 w3-white w3-margin-left w3-margin-right">
+<script src="../../nav.js"></script>
+
+<br>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h3 class="w3-center"><b>Lip Movement Generation at a Galance</b></h3>
+</div> 
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>What is the problem?</b></h4>
+    <p>
+    This paper considers a task: given an arbitrary audio speech and one lip image of arbitrary target identity, generate synthesized lip movements of the target identity saying the speech. Notice that the speech does not have to be spoken by the target identity, and neither the speech nor the image of target identity is required to be appeared in the training set. Solving this task is crucial to many applications, e.g., enhancing speech comprehension while preserving privacy or assistive devices for hearing impaired people.
+    </p>
+    <div align="center">
+        <img src="../../r/lipgen/problem.png" style="width:100%;max-width:720px">
+        <p><i>Figure: The model takes an audio speech of the women and one lip image of the target identity, a male celebrity in this case, and synthesizes a video of the mans lip saying the same speech. The synthesized lip movements need to correspond to the speech audio and also maintain the target identity, video smoothness and sharpness.</i></p>
+    </div>
+</div>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>Challenges:</b></h4>
+    <p>To perform well in this task, a model needs to not only consider the retention of target identity, photo-realistic of synthesized images, consistency and smoothness of lip images in a sequence, but more importantly, learn the correlations between audio speech and lip movements.</p>
+</div>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>What is our approach?</b></h4>
+
+    <p>To solve the collective problems, we devise a network to synthesize lip movements and propose a novel correlation loss to synchronize lip changes and speech changes. Our full model utilizes four losses for a comprehensive consideration; it is trained end-to-end and is robust to lip shapes, view angles and different facial characteristics.</p>
+
+    <div align="center">
+        <img src="../../r/lipgen/architecture.png" style="width:90%">
+        <p><i>Figure: Full model illustration. Audio encoder and identity encoder extracts and fuses audio and visual embeddings. Audio-Identity fusion network fuses features from two modalities. Decoder expands fused feature to synthesized video. Correlation Networks are in charge of strengthening the audio-visual mapping. Three-Stream discriminator is responsible for distinguishing generated video and real video.</i></p>
+    </div>
+
+</div>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+  
+    <div class="w3-third w3-container">
+        <img src="../../r/lipgen/fusion.png" style="width:100%">
+        <div align="center">
+            <p><i>Figure: Transfer audio time-frequency features and image spatial features to video spatial-temporal features.</i></p>
+        </div>
+    </div>
+
+    <div class="w3-third w3-container">
+        <img src="../../r/lipgen/correlation.png" style="width:100%">
+        <p><i>Figure: Correlation coefficients with different offsets.</i></p>
+    </div>
+
+    <div class="w3-third w3-container">
+        <img src="../../r/lipgen/threestream.png" style="width:100%">
+        <div align="center">
+            <p><i>Figure: Three-stream GAN discriminator.</i></p>
+        </div>
+    </div>
+
+</div> 
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>Our Results:</b></h4>
+
+    <div align="center">
+        <img src="../../r/lipgen/result1.png" style="width:100%">
+        <p><i>Figure: Randomly selected outputs of the full model on the LRW testing set. The lip shape in videos not only synchronize well with the ground truth, but maintain identity information, such as (beard v.s. no beard).</i></p>
+    </div>
+
+    <div align="center">
+        <img src="../../r/lipgen/result2.png" style="width:100%">
+        <p><i>Figure: The figure shows the generated images based on three identity images outside of dataset, which is also not paired with the input audio from GRID dataset. Two full models trained on GRID and LRW datasets are used here for a comparison.</i></p>
+    </div>
+
+</div> 
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>Demo:</b></h4>
+    <div align="center">
+        <iframe src="https://www.youtube.com/embed/7IX_sIL5v0c" style="width:100%;max-width:720px;height:480px"></iframe>
+    </div>
+</div>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>Code/Download:</b></h4>
+    <ul>
+        <li>Our code and documentation are downloadable <a href="https://github.com/lelechen63/3d_gan">here</a>.</li>
+    </ul>
+</div>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>Publications:</b></h4>
+    <ol>
+        <li>L. Chen, Z. Li, R. Maddox, Z. Duan and C. Xu. Lip movements generation at a glance. In <i>Proc. of European Conference on Computer Vision</i>, 2018. [<a href="http:../../p/eccv2018_lipgen_paper.pdf">pdf</a>]</li>
+    </ol>
+
+</div> 
+
+<br>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <b>Acknowledgements:</b> This material is based upon work supported by the National Science Foundation under Grants No. <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1741472">1741472</a>, and the University of Rochester AR/VR Pilot Award.<br>
+    <b>Disclaimer:</b> Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the funding agents.<br>
+</div>
+
+<hr>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Deep Grouping Model for Unified Perceptual Parsing</title>
+</head>
+
+<body class="w3-content w3-light-grey">
+<div class="w3-card-8 w3-white w3-margin-left w3-margin-right">
+<script src="../../../nav.js"></script>
+
+<br>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h3 class="w3-center"><b>Dynamic Graph Modules<br> for Modeling Object-Object Interactions in Activity Recognition</b></h3>
+</div> 
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>What is the problem?</b></h4>
+    <p>Video action recognition has shown remarkable progress through the use of deep learning and newly-released datasets, e.g., Kinetics, Something-Something, and ActivityNet to name a few. Despite the importance of complex object-object interactions in defining actions (see the Figure below for an example), they are often overlooked. To recognize such interactions, we postulate that two general relations should be taken into consideration: 1) the interactions among different objects in a single frame, and 2) the transition of such interactions among different objects and the same object across multiple frames. We denote the former relation as spatial relation, and the latter one as temporal relation. Both are crucial to recognize actions involving multiple objects. An effective action recognition model should be able to capture both relations precisely and simultaneously.</p>
+    <div align="center">
+        <img src="../../../r/dgm/problem.png" style="width:100%;max-width:720px">
+        <p><i>Figure: The action &quot;pulling two ends of a hair band so that it gets stretched&quot; contains interactions between two hands and a hair band. The visual graph captures the relation between visually similar objects (blue arrows) while the location graph captures relation between overlapped or close objects (white arrows).</i></p>
+    </div>
+</div>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>What is our approach?</b></h4>
+
+    <p>Despite many recent works that explore modeling interactions between objects, few of them build models to capture the spatiotemporal interactions simultaneously. To model interactions among objects in both the spatial and temporal domain, we propose a dynamic graph module to capture object interactions from the beginning of a video in a progressive way to recognize actions.</p>
+
+    <div align="center">
+        <img src="../../../r/dgm/framework.png" style="width:100%">
+        <p><i>Figure: (a) A <b>hidden graph</b> is built dynamically in the temporal domain. At each time step, the hidden graph incorporates information from proposals and generates a context vector (denoted as ctx) for action recognition. (b) At t-1 time step, the hidden graph (top row) first incorporates messages from all proposals in the current frame (bottom row) as indicated by yellow arrows; then the hidden graph updates its edges as indicated by black arrows. The width of arrows represents the amount of information that flows along the edges. This process iterates in the following time steps.</i></p>
+    </div>
+
+    <p>Similar to LSTM, we maintain a hidden state across time steps, in the form of a complete directed graph with self-connections, which we named <b>hidden graph</b>. When a new frame arrives, regions of interests (RoIs) in this frame are connected with nodes in the hidden graph by edges. Then, messages from RoIs in the new arriving frame will be passed to the hidden graph explicitly. After the information passing, the hidden graph further performs a self-update. A global aggregation function is applied to summarize the hidden graph for action recognition at this time step. When the next frame arrives, we repeat the above steps. Through this dynamic hidden graph structure, we capture both the spatial relation in each arrival frame and the temporal relation across frames.</p>
+
+    <p>To fully exploit diverse relations among different objects, we propose two instantiations of our graph module: visual graph and location graph. The <b>visual graph</b> is built based on the visual similarity of RoIs to link the same or similar objects and model their relations. The <b>location graph</b> is built on locations/coordinates of RoIs. Spatially overlapped or close objects are connected in the location graph. The streaming nature of our proposed methods enables the recognition of actions with only a few starting frames. As more frames come in, the accuracy of our model increases steadily. Our graph module is generic and can be combined with any 2D or 3D ConvNet in a plug-and-play fashion.</p>
+
+</div>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>Our Results:</b></h4>
+
+    <p>The accuracy of the two graph modules increases steadily as the number of frames increases and plateaus at 7-th feature map. It demonstrates that our graph module has the ability to recognize actions in streaming videos, even if only parts of frames are forwarded into the module.</p>
+
+    <div align="center">
+        <img src="../../../r/dgm/result1.png" style="width:100%;max-width:500px">
+        <p><i>Figure: Top-1 accuracy on Something-Something v1 validation set for each feature map. Avg means the average accuracy of the total eight feature maps.<i></p>
+    </div>
+
+    <p>We compare our static version model with some recent works. Although using a relatively strong backbone 3D ConvNet, our graph module still boosts the performance of the backbone. We also report our results on the leaderboard. Without bells and whistles (e.g., flow inputs and ensembling), our model achieves competitive results.</p>
+
+    <div align="center">
+        <img src="../../../r/dgm/result2.png" style="width:100%;max-width:850px">
+        <p><i>Table: Comparing performance of the static version model on Something-Something v1 and v2 datasets with state-of-the-art methods. The &quot;test&quot; columns are leaderboard results. Note that we only use RGB modality and relatively simple preprocessing steps. The top two scores of each metric are highlighted. (&quot;-&quot; means there is no publicly available evaluation scores released by the authors.) See references in our paper.</i></p>
+    </div>
+
+</div> 
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>Supplementary:</b></h4>
+    <ul>
+        <li>The supplementary document can be downloaded <a href="bmvc2019_gcnact_supp.pdf">here</a>.</li>
+    </ul>
+</div>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>Publications:</b></h4>
+    <ol>
+        <li>H. Huang, L. Zhou, W. Zhang, J. J. Corso, and C. Xu. Dynamic graph modules for modeling object-object interactions in activity recognition. In Proc. of British Machine Vision Conference, 2019. [<a href="https://arxiv.org/abs/1812.05637">pdf</a>]</li>
+    </ol>
+
+</div> 
+
+<br>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <b>Acknowledgements:</b> This material is based upon work supported by the National Science Foundation under Grants No. <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1741472">1741472</a>, No. <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1813709">1813709</a>, and No. <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1764415">1764415</a>.<br>
+    <b>Disclaimer:</b> Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the funding agents.<br>
+</div>
+
+<br>
+
+</div>
+</body>
+</html>

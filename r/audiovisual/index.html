@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Audio-Visual Scene Understanding</title>
+</head>
+
+<body class="w3-content w3-light-grey">
+<div class="w3-card-8 w3-white w3-margin-left w3-margin-right">
+<script src="../../nav.js"></script>
+
+<br>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h3 class="w3-center"><b>Audio-Visual Scene Understanding</b></h3>
+</div> 
+
+<br>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <div style="float:right;margin-left:15px;margin-top:-15px">
+        <img src="../logos/NSF.jpg" style="width:100%;max-width:120px">
+    </div>
+    <b>PI:</b> <a href="../../index.html">Chenliang Xu</a>, 
+    <b>Co-PI:</b> <a href="http://www2.ece.rochester.edu/~zduan/">Zhiyao Duan</a><br>
+    <b>Graduate Students:</b> 
+    <a href="http://yapengtian.org/">Yapeng Tian</a>, 
+    <a href="https://www.cs.rochester.edu/u/lchen63/">Lele Chen</a>, 
+    Hao Huang, 
+    Wei Zhang, 
+    Sefik Emre Eskimez, 
+    <a href="http://www2.ece.rochester.edu/~bli23/">Bochen Li</a>, 
+    Rui Lu, 
+    Yujia Yan
+    <br>
+    <b>Undergraduate Students:</b> 
+    Bryce Yahn,
+    Patrick Phillips,
+    Justin Goodman, 
+    Marc Moore, 
+    Chenxiao Guan<br>
+    <b>Award Number:</b> NSF IIS <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1741472">1741472</a><br>
+    <b>Award Title:</b> BIGDATA: F: Audio-Visual Scene Understanding<br>
+    <b>Award Amount:</b> &#36;666,000.00<br>
+    <b>Duration:</b> 09/01/2017 - 08/31/2021 (Estimated)
+</div> 
+
+<br>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>Overview of Goals and Challenges:</b></h4>
+    <div style="float:right;margin-left:15px;margin-top:5px">
+        <img src="cover.jpg" style="width:100%;max-width:520px">
+    </div>
+    <p>Understanding scenes around us, i.e., recognizing objects, human actions and events, and inferring their spatial, temporal, correlative and causal relations, is a fundamental capability in human intelligence. Similarly, designing computer algorithms that can understand scenes is a fundamental problem in artificial intelligence. Humans consciously or unconsciously use all five senses (vision, audition, taste, smell, and touch) to understand a scene, as different senses provide complimentary information. For example, watching a movie with the sound muted makes it very difficult to understand the movie; walking on a street with eyes closed without other guidance can be dangerous. Existing machine scene understanding algorithms, however, are designed to rely on just a single modality. Take the two most commonly used senses, vision and audition, as an example, there are scene understanding algorithms designed to deal with each single modality. However, no systematic investigations have been conducted to integrate these two modalities towards more comprehensive audio-visual scene understanding. Designing algorithms that jointly model audio and visual modalities towards a complete audio-visual scene understanding is important, not only because this is how humans understand scenes, but also because it will enable novel applications in many fields. These fields include multimedia (video indexing and scene editing), healthcare (assistive devices for visually and aurally impaired people), surveillance security (comprehensive monitoring of the suspicious activities), and virtual and augmented reality (generation and alternation of visuals and/or sound tracks).</p>
+    <p>This project aims to achieve human-like audio-visual scene understanding that overcomes the limitations of single-modality approaches through big data analysis of Internet videos. The core idea is to learn to parse a scene into elements and infer their relations, i.e., forming an audio-visual scene graph. Specifically, an element of the audio-visual scene can be a joint audio-visual component of an event when the event shows correlated audio and visual features. It can also be an audio component or a visual component if the event only appears in one modality. The relations between the elements include spatial and temporal relations at a lower level, as well as correlative and causal relations at a higher level. Through this scene graph, information across the two modalities can be extracted, exchanged and interpreted. The investigators propose three main research thrusts: (1) Learning joint audio-visual representations of scene elements; (2) Learning a scene graph to organize scene elements; and (3) Cross-modality scene completion. Each of the three research thrusts explores a dimension in the space of audio-visual scene understanding, yet they are also inter-connected. For example, the audio-visual scene elements are nodes in the scene graph, and the scene graph, in turn, guides the learning of relations among scene elements with structured information; the cross-modality scene completion generates missing data in the scene graph and is necessary for good audio-visual understanding of the scene.</p>
+</div>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>Current Results:</b></h4>
+    <div class="w3-container w3-center">
+            <p><b>Data</b>, <b>demos</b>, and <b>software</b> are downloadable by following the individual tasks below.</p>
+    </div>
+</div>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+
+     <div class="w3-third"> <a href="../../r/talkface/index.html">
+        <div class="w3-card-4" style="height: 16em">
+            <div class="w3-container w3-center">
+                    <b>Talking Face Generation</b><br>
+            </div>
+            <img src="../../r/audiovisual/facegen.png" style="width:100%">
+        </div>
+        </a><br> 
+     </div>
+
+    <div class="w3-third"> <a href="https://sites.google.com/view/avcap">
+        <div class="w3-card-4" style="height: 16em">
+            <div class="w3-container w3-center">
+                    <b>Modality-Interpretable Video Captioning</b>
+            </div>
+            <br>
+            <img src="../../r/audiovisual/avcap.jpg" style="width:100%">
+        </div>
+        </a><br> 
+    </div>
+
+    <div class="w3-third"> <a href="https://sites.google.com/view/audiovisualresearch">
+        <div class="w3-card-4" style="height: 16em">
+            <div class="w3-container w3-center">
+                    <b>Audio-Visual Event Localization</b>
+            </div>
+            <br>
+            <img src="../../r/audiovisual/ave.jpg" style="width:100%">
+        </div>
+        </a><br> 
+    </div>
+
+    <div class="w3-third"> <a href="http://www2.ece.rochester.edu/projects/air/projects/av_music_association.html">
+        <div class="w3-card-4" style="height: 16em">
+            <div class="w3-container w3-center">
+                <b>Source Association for Chamber Music Ensembles</b>
+            </div>
+            <img src="../../r/audiovisual/sourceassmusic.png" style="width:100%">
+        </div>
+        </a><br> 
+    </div>
+
+    <div class="w3-third"> <a href="http://www2.ece.rochester.edu/projects/air/projects/skeletonpianist.html">
+        <div class="w3-card-4" style="height: 16em">
+            <div class="w3-container w3-center">
+                    <b>Skeleton Plays Piano</b>
+            </div>
+            <img src="../../r/audiovisual/skepiano.png" style="width:100%">
+        </div>
+        </a><br> 
+    </div>
+
+    <div class="w3-third"> <a href="http://www2.ece.rochester.edu/projects/air/projects/URMP.html">
+        <div class="w3-card-4" style="height: 16em">
+            <div class="w3-container w3-center">
+                    <b>UR Multi-modal Music Performance (URMP) Dataset</b>
+            </div>
+            <br>
+            <img src="../../r/audiovisual/urmp.png" style="width:100%">
+        </div>
+        </a><br> 
+    </div>
+
+    <div class="w3-third"> <a href="http://www2.ece.rochester.edu/projects/air/projects/talkingface.html">
+        <div class="w3-card-4" style="height: 16em">
+            <div class="w3-container w3-center">
+                    <b>Talking Face Landmarks Generation</b>
+            </div>
+            <br>
+            <img src="../../r/audiovisual/facemark.png" style="width:100%">
+        </div>
+        </a><br> 
+    </div>
+
+    <div class="w3-third"> <a href="http://www2.ece.rochester.edu/projects/air/projects/3Dtalkingface.html">
+        <div class="w3-card-4" style="height: 16em">
+            <div class="w3-container w3-center">
+                    <b>3D Talking Face Landmarks Generation</b>
+            </div>
+            <br>
+            <img src="../../r/audiovisual/facemark3d.jpg" style="width:100%">
+        </div>
+        </a><br> 
+    </div>
+
+    <div class="w3-third"> <a href="../../r/lipgen/index.html">
+        <div class="w3-card-4" style="height: 16em">
+            <div class="w3-container w3-center">
+                    <b>Lip Movements Generation</b>
+            </div>
+            <img src="../../r/audiovisual/lipgen.jpg" style="width:100%">
+        </div>
+        </a><br> 
+    </div>
+
+    <div class="w3-third"> <a href="http://www2.ece.rochester.edu/projects/air/projects/av_match_fusion.html">
+        <div class="w3-card-4" style="height: 16em">
+            <div class="w3-container w3-center">
+                    <b>Audio-Visual Speech Source Separation</b>
+            </div>
+            <br>
+            <img src="../../r/audiovisual/av_separation_fusion.jpg" style="width:100%">
+        </div>
+        </a><br> 
+    </div>
+
+</div>
+
+<br>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>Broader Impacts:</b></h4>
+    <p>This research is of key interest to both computer vision and computer audition communities. First, the task of scene understanding is a long-lasting topic in both communities and is being tackled independently. This project ties researches in these communities together and advances both. Second, our learned bimodal representations can be used in solving other problems, in which relying on a single modality may have much difficulty. Third, our audio-visual computational models reveal interesting scientific inquires of how humans understand videos. This can lead to better design of the future AI system.</p>
+    <p>This research is intellectually transformative in advancing multi-modal modeling and robot perception. The methodologies and techniques developed in learning audio-visual bimodal representations in this project can be applied to multi-modal modeling with data from various sources such as tactile perception, GPS, radar and lasers, leading to a coherent robot perception system. One immediate application could be the perception problem in autonomous vehicles. The techniques developed in this research also enable novel applications in many other fields. These fields include multimedia (video indexing and scene editing), healthcare (assistive devices for visually and aurally impaired people), surveillance security (comprehensive monitoring of the suspicious activities), and virtual and augmented reality (generation and alternation of visuals and/or sound tracks).</p>
+    <ul>
+        <li>PI Xu taught a workshop related to this project to a cohort of 17 high school students through the University of Rochester's Pre-College Program in Summer 2018. He also offered lab visits with demos related to this project to students.</li>
+        <li>Co-PI Duan taught a summer mini-course related to this project to high school students (mostly underrepresented minority students) at the Upward Bound program organized by the Kearns Center at the University of Rochester.</li>
+        <li>The team collaborates with <a href="https://www.urmc.rochester.edu/people/30363779-ross-k-maddox">Prof. Ross Maddox</a> on applying our talking face system to assist  hearing impaired to better understand speech. [<a href="https://asa.scitation.org/doi/abs/10.1121/1.5035944">link</a>] </li>
+
+    </ul>
+</div>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>Publications from the Team:</b></h4>
+    <ol>
+
+        <!--2021-->
+        <li><a href="https:../../p/cvpr2021_avrobust_paper.pdf"><b>Can audio-visual integration strengthen robustness under multimodal attacks?</b></a> Y. Tian, and C. Xu. <i>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2021</li>
+
+        <li><a href="https:../../p/cvpr2021_ccol_paper.pdf"><b>Cyclic co-learning of sounding object visual grounding and sound separation.</b></a> Y. Tian, D. Hu, and C. Xu. <i>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2021</li>
+
+        <!--2020-->
+        <li><a href="https:../../p/eccv2020_avparse_paper.pdf"><b>Unified multisensory perception: Weakly-supervised audio-visual video parsing.</b></a> Y. Tian, D. Li, and C. Xu. <i>European Conference on Computer Vision (ECCV)</i>, 2020.</li>
+
+        <li><a href="https:../../p/eccv2020_tilthead_paper.pdf"><b>Talking-head generation with rhythmic head motion.</b></a> L. Chen, G. Cui, C. Liu, Z. Li, Z. Kou, Y. Xu, and C. Xu. <i>European Conference on Computer Vision (ECCV)</i>, 2020.</li>
+
+        <li><a href="https:../../p/cvprw2020_what_paper.pdf"><b>What comprises a good talking-head video generation?</b></a> L. Chen, G. Cui, Z. Kou, H. Zheng, and C. Xu. <i>IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)</i>, 2020</li>
+
+        <li><a href="../../p/cvprw2020_colearn_paper.pdf"><b>Co-learn sounding object visual grounding and visually indicated sound separation in a cycle.</b></a> Y. Tian, D. Hu, and C. Xu. <i>IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)</i>, 2020.</li>
+
+        <li><a href="../../p/cvprw2020_dap_paper.pdf"><b>Deep audio prior: Learning sound source separation from a single audio mixture.</b></a> Y. Tian, C. Xu, and D. Li. <i>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPRW)</i>, 2020.</li>
+
+        <li><a href="../../p/cvprw2020_avparse_paper.pdf"><b>Weakly-supervised audio-visual video parsing toward unified multisensory perception.</b></a> Y. Tian, D. Li, and C. Xu. <i>IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)</i>, 2020</li>
+
+        <!--From Co-PI-->
+        <li><a href="../../p/icassp2020_e2etalkface_paper.pdf"><b>End-to-end generation of talking faces from noisy speech.</b></a> S. E. Eskimez, R. K. Maddox, C. Xu, and Z. Duan. <i>International Conference on Acoustics, Speech, and Signal Processing (ICASSP)</i>, 2020</li>
+
+        <!--2019-->
+        <li><a href="https:../../p/jov2019_visualhaptic_paper.pdf"><b>Can multisensory training aid visual learning?: A computational investigation.</b></a> R. A. Jacobs and C. Xu. <i>Journal of Vision</i>, 2019.</li>
+
+        <li><a href="../../p/cvpr2019_facegen_paper.pdf"><b>Hierarchical cross-modal talking face generation with dynamic pixel-wise loss.</b></a> L. Chen, R. Maddox, Z. Duan, and C. Xu. <i>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2019.</li>
+
+        <li><a href="../../p/cvprw2019_avcap_paper.pdf"><b>Audio-visual interpretable and controllable video captioning.</b></a> Y. Tian, C. Guan, J. Goodman, M. Moore and C. Xu. <i>IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)</i>, 2019.</li>
+
+        <li><a href="../../p/cvprw2019_facegen_paper.pdf"><b>Sound to visual: Hierarchical cross-modal talking face video generation.</b></a> L. Chen, H. Zheng, R. Maddox, Z. Duan and C. Xu. <i>IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)</i>, 2019.</li>
+
+        <li><a href="../../p/cvprw2019_ave_paper.pdf"><b>Audio-visual event localization in the wild.</b></a> Y. Tian, J. Shi, B. Li, Z. Duan and C. Xu. <i>IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)</i>, 2019.</li>
+
+        <!--From Co-PI-->
+
+        <li><a href="https://ieeexplore.ieee.org/abstract/document/8871109"><b>Noise-resilient training method for face landmark generation from speech.</b></a> S. E. Eskimez, R. K. Maddox, C. Xu, and Z. Duan. <i>IEEE/ACM Transcations on Audio, Speech and Language Processing (TASLP)</i>, 2019</li>
+
+        <li><a href="https://transactions.ismir.net/articles/10.5334/tismir.25/"><b>Online audio-visual source association for chamber music performances.</b></a> B. Li, K. Dinesh, C. Xu, G. Sharma, and Z. Duan. <i>Transcations of the International Society for Music Information Retrieval</i>, 2019.</li>
+
+        <li><a href="https://ieeexplore.ieee.org/document/8411155"><b>Creating a multi-track classical music performance dataset for multi-modal music analysis: challenges, insights, and applications.</b></a> B. Li, X. Liu, K. Dinesh, Z. Duan, and G. Sharma. <i>IEEE Transactions on Multimedia (TMM)</i>, 2019.</li>
+
+        <li><a href="https://ieeexplore.ieee.org/document/8588405"><b>Audio-visual analysis of music performances: Overview of an emerging field.</b></a> Z. Duan, S. Essid, C. Liem, G. Richard, and G. Sharma. <i>IEEE Signal Processing Magazine</i>, 2019.</li>
+
+        <li><a href="https://ieeexplore.ieee.org/document/8762221"><b>Audio-visual deep clustering for speech separation.</b></a> R. Lu, Z. Duan, and C. Zhang. <i>IEEE/ACM Transactions on Audio Speech and Language Processing</i>, 2019.</li>
+
+        <!--2018-->
+        <li><a href="../../p/eccv2018_ave_paper.pdf"><b>Audio-visual event localization in unconstrained videos.</b></a> Y. Tian, J. Shi, B. Li, Z. Duan and C. Xu. <i>European Conference on Computer Vision (ECCV)</i>, 2018.</li>
+
+        <li><a href="../../p/eccv2018_lipgen_paper.pdf"><b>Lip movements generation at a glance.</b></a> L. Chen, Z. Li, R. Maddox, Z. Duan and C. Xu. <i>European Conference on Computer Vision (ECCV)</i>, 2018.</li>
+
+        <!--From Co-PI-->
+        <li><a href="https://arxiv.org/abs/1803.09803"><b>Generating talking face landmarks from speech.</b></a> S. E. Eskimez, R. Maddox, C. Xu and Z. Duan. <i>International Conference on Latent Variable Analysis and Signal Separation</i>, 2018.</li>
+
+        <li><a href="https://ieeexplore.ieee.org/document/8404105"><b>Listen and look: audio-visual matching assisted speech source separation.</b></a> R. Lu, Z. Duan, and C. Zhang. <i>IEEE Signal Processing Letters</i>, 2018.</li>
+
+        <li><a href="https://archives.ismir.net/ismir2018/paper/000109.pdf"><b>Skeleton plays piano: End-to-end online generation of pianist body movements from MIDI performance.</b></a> B. Li, A. Maezawa, and Z. Duan. In <i>Proc. of International Society for Music Information Retrieval Conference</i>, 2018.</li>
+
+        <li><a href="http://www2.ece.rochester.edu/projects/air/publications/wang2018score.pdf"><b>Score-aligned polyphonic microtiming estimation.</b></a> X. Wang, R. Stables, B. Li, and Z. Duan. <i>IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</i>, 2018.</li>
+
+        <!--2017-->
+        <li><a href="https:../../p/acmmmw2017_vagan_paper.pdf"><b>Deep cross-modal audio-visual generation.</b></a> L. Chen, S. Srivastava, Z. Duan, and C. Xu. <i>ACM International Conference on Multimedia Thematic Workshops (ACMMMW)</i>, 2017.</li>
+
+</li>
+            
+    </ol>
+</div> 
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+        <b>Acknowledgements:</b> This material is based upon work supported by the National Science Foundation under Grant No. <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1741472">1741472</a>.<br>
+        <b>Disclaimer:</b> Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.<br>
+        <b>Point of Contact:</b> <a href="http:../../index.html" style="text-decoration:none">Chenliang Xu</a><br>
+        <b>Date of Last Update:</b> July, 2020
+</div> 
+
+<hr>
+
+</div>
+</body>
+</html>

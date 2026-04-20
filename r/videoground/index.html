@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Weakly-Supervised Video Grounding</title>
+</head>
+
+<body class="w3-content w3-light-grey">
+<div class="w3-card-8 w3-white w3-margin-left w3-margin-right">
+<script src="../../nav.js"></script>
+
+<br>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h3 class="w3-center"><b><i>Not All Frames Are Equal:</i> Weakly-Supervised Video Grounding with Contextual Similarity and Visual Clustering Losses</b></h3>
+</div> 
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>What is the problem?</b></h4>
+    <p>Grounding textual signals to visual-spatial regions have various applications, e.g., robotics, human-computer interaction, and image retrieval. While visual grounding in static images has witnessed great progress, visual grounding in videos is still challenging: first, a video contains many frames, which induces the temporal visual-language alignment problem that is unique to video grounding; second, despite rich source of online videos, constructing a large scale video dataset with grounding annotation is expensive and time-consuming. Therefore, we aim to do weakly-supervised video grounding: localize language queries in video frames without object location annotation. This task is typically modeled in the Multiple Instance Learning (MIL) framework. However, the following dilemma needs to be addressed (see Figure).</p>
+    <div align="center">
+        <img src="../../r/videoground/problem.png" style="width:100%;max-width:600px">
+        <p><i>Figure: The illustration of (a) video-level MIL and (b) frame-level MIL. V1 to V4 are uniformly sampled from a video segment. Region proposals in different frames are distinguished by color. Video-level MIL puts region proposals from all frames into one bag while frame-level MIL constructs a bag for each frame. The positive instances are denoted with black shadow. <b>Here is the dilemma:</b> video-level MIL suffers from monotonically increased bag size w.r.t. the number of frames, while frame-level MIL may contain false positive bags such as bags for V3 and V4.</i></p>
+    </div>
+</div>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>What is our approach?</b></h4>
+
+     <div style="float:right;margin-left:15px;margin-top:5px">
+        <img src="../../r/videoground/contextsimi.png" style="width:100%;max-width:460px">
+    </div>
+
+    <p>To overcome the above limitations, we first compare the performance of vanilla brute-force video-level MIL and frame-level MIL and decide to follow the latter choice. Then, to better conquer the downsides, we propose a contextual similarity to measure the similarity score between the frame and the language query based on two intuitions:</p>
+    <ol>
+        <li><i>If a sentence contains multiple queries, then each query should focus on its most relevant frames.</i></li>
+        <li><i>If an object appears sparsely across frames, the no-object frames should be insignificant compared with the frames where the object appears.</i></li>
+    </ol>
+    <p>In the case of MIL, the contextual similarity can be viewed as an augmented similarity by considering the possibility of a frame to be the true positive bag of a query. Moreover, such possibility for one frame is calculated by looking at the other frames in the same video, which makes it more reliable.</p>
+    <p>Furthermore, we propose visual clustering to leverage the temporal information better. Visual clustering is inspired by the idea:</p>
+    <ol start="3">
+        <li><i>If two regions have high similarity to a common query, then they should also be similar to each other.</i></li>
+    </ol>
+    <p>In this case, the visual similarity is not restricted to the adjacent frames, but can also work with sparsely sampled frames in a video segment.</p>
+
+</div>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>Our Results:</b></h4>
+
+    <div align="center">
+        <img src="../../r/videoground/result_youcook.png" style="width:100%">
+        <p><i>Figure: Visualization of grounding results from frame-level DVSA and our proposed methods on YouCookII. <b>Bold</b> words are queries. <font color="red">Red</font>, <font color="green">green</font> and <font color="grey">grey</font> boxes represent model prediction, ground-truth and region proposals, respectively.</i></p>
+    </div>
+
+    <div align="center">
+        <img src="../../r/videoground/result_robowatch.png" style="width:100%;max-width:500px">
+        <p><i>Figure: Visualization of grounding results with our full model on RoboWatch. The green queries have been seen in YouCookII while the red one has not. <font color="red">Red</font>, <font color="green">green</font> and <font color="grey">grey</font> boxes represent model prediction, ground-truth and region proposals, respectively.</i></p>
+    </div>
+
+</div> 
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>Poster:</b></h4>
+    <div align="center">
+        <iframe src="../../p/cvpr2019_videoground_poster.pdf" style="width:100%;height:500px"></iframe>
+    </div>
+</div>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>Demo:</b></h4>
+    <div align="center">
+        <iframe src="https://www.youtube.com/embed/I8_OvuoOgm0" style="width:100%;height:520px"></iframe>
+    </div>
+</div>
+
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>Code/Download:</b></h4>
+    <ul>
+        <li>Our code and documentation are downloadable <a href="https://github.com/jshi31/NAFAE">here</a>.</li>
+    </ul>
+</div>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <h4><b>Publications:</b></h4>
+    <ol>
+        <li>J. Shi, J. Xu, B. Gong and C. Xu. Not all frames are equal: Weakly-supervised video grounding with contextual similarity and visual clustering losses. In Proc. of IEEE Conference on Computer Vision and Pattern Recognition, 2019. [<a href="../../p/cvpr2019_videoground_paper.pdf">pdf</a>]</li>
+    </ol>
+
+</div> 
+
+<br>
+
+<div class="w3-row-padding" style="padding-left:35px;padding-right:35px">
+    <b>Acknowledgements:</b> This material is based upon work supported by the National Science Foundation under Grants No. <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1741472">1741472</a>, No. <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1813709">1813709</a>, and the the Tencent Rhino-Bird gift.<br>
+    <b>Disclaimer:</b> Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the funding agents.<br>
+</div>
+
+<hr>
+
+</div>
+</body>
+</html>
