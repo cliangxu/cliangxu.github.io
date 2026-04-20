@@ -37,13 +37,18 @@
         `<div id="site-header">` +
             `<div id="site-nav">` +
                 `<a id="site-name" href="${root}index.html">Chenliang Xu</a>` +
-                `<ul class="w3-navbar">${lis}</ul>` +
+                `<ul class="w3-navbar" id="site-navbar">${lis}</ul>` +
                 `<a href="https://www.rochester.edu" id="ur-logo-link">` +
                     `<img src="${root}UR-logo.png" alt="University of Rochester" id="ur-logo">` +
                 `</a>` +
+                `<button id="nav-toggle" aria-label="Toggle navigation">☰</button>` +
             `</div>` +
         `</div>`
     );
+
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+        document.getElementById('site-navbar').classList.toggle('open');
+    });
 
     // Shadow when page is scrolled
     window.addEventListener('scroll', function () {
