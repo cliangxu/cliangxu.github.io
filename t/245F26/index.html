@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Fall 2026 - CSC 245/445 Deep Learning</title>
+    <style>
+    table {
+        width: 100%;
+    }
+    th, td {
+        border: 1px solid black;
+        text-align: center;
+    }
+    td {
+        font-size:90%;
+    }
+    </style>
+</head>
+
+<body class="w3-content">
+<script src="../../nav.js"></script>
+
+<div class="w3-container w3-margin-top">
+
+    <h3 class="w3-center">Fall 2026 - CSC 245/445: Deep Learning</h3>
+
+    <h4>Basic Information</h4>
+
+    <p><b>Meet Time/Location:</b> T/R 09:40-10:55 in Morey 321</p>
+
+    <p>
+    <b>Instructor:</b> <a href="../../index.html" style="text-decoration:none">Prof. Chenliang Xu</a><br>
+    <b>Instructor's Office Hours:</b> Tue 2:00-4:00 pm in Wegmans 3005
+    </p>
+
+    <p><b>TAs and Office Hours:</b>
+    <ul>
+        <li>Ryan Bowering, TBD</li>
+        <li>Zhangyun Tan, TBD</li>
+    </ul>
+
+    </p>
+
+    <p><b>Information Flow:</b> We will use <b>Blackboard</b> to make announcements, host lecture notes/assignments, and submit/grade student work. The course ID is CSC245.01.FALL2026UROCH. We will use Blackboard's <b>Discussions Tab</b> for class-related discussion and communication, so that you can get help fast from the teaching team and your fellow classmates. Don't hensitate to email me and the TAs if it is a personal matter. Finally, this <b>course website</b> containing the course schedule serves as a syllabus.</p>
+
+    <p><b>Credit Hours:</b> This is a four-credit-hour course. The credit hours are met by weekly lectures (150 minutes), office hours, homework assignments, and a final course project.</p>
+
+    <hr>
+
+    <h4>Course Description</h4>
+
+    <p>Much of the recent advances in machine learning and artificial intelligence have been dominated by neural network approaches broadly described as deep learning. This course provides an overview of the most important deep learning techniques covering both theoretical foundations and practical applications. The applications focus on problems in image understanding and language modeling utilizing state-of-the-art deep learning libraries and tools, which will be introduced in the course.</p>
+
+    <p><b>Course Objective:</b> The course aims to provide students with a dive to deep learning foundations and an introduction to modern research topics in this field. It is designed as an upper-level elective course for junior and senior students in CS and DCS and an AI breath course for CS graduate students.</p>
+
+    <p><b>Prerequisites:</b> MTH 164 (Multivariable Calculus) or MTH 165 (linear algebra), and CSC 172 (data structures and algorithms). Programming in Python. Recommended but not required: CSC 242.</p>
+
+    <p><b>CS Instructional Network:</b> The course programming assignments require you to have an account in the CS instructional network. You should test your code in the CS instructional network before submission as this is the environment we use to grade assignments. Follow this <b><a href="https://accounts.csug.rochester.edu">link</a></b> to request an account if you don't have one.</p>
+
+    <hr>
+
+    <h4>Schedule</h4>
+
+    <p>Below is a <b>tentative</b> schedule of the course and is subject to <b>changes over the term</b>.<br>
+    <font class="w3-pale-blue">Part I:</font> Neural Network Basics,
+    <font class="w3-pale-yellow">Part II:</font> Intermediate Topics, 
+    <font class="w3-pale-green">Part III:</font> Advanced Topics.
+    </p>
+
+    <table>
+    <tr>
+        <th style="width:10%">Dates</th>
+        <th style="width:35%">Tuesday (T)</th>
+        <th style="width:35%">Thursday (R)</th>
+        <th style="width:15%">Final Project</th>
+    </tr>
+
+    <tr>
+        <td>9/1,3</td>
+        <td class="w3-pale-blue">Introduction I</td>
+        <td class="w3-pale-blue">Introduction II</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>9/8,10</td>
+        <td class="w3-pale-blue">Machine Learning Basics I</td>
+        <td class="w3-pale-blue">Machine Learning Basics II</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>9/15,17</td>
+        <td class="w3-pale-blue">Feedforward Neural Networks</td>
+        <td class="w3-pale-blue"><b>Programming Tutorial</b></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>9/22,24</td>
+        <td class="w3-pale-blue">Backpropagation</td>        
+        <td class="w3-pale-blue">Optimization</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>9/29,10/1</td>
+        <td class="w3-pale-blue">Regularization</td>
+        <td class="w3-pale-yellow">Convolutional Neural Networks I</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>10/6,8</td>
+        <td><b>Teaming & Brainstorming</b></td>
+        <td class="w3-pale-yellow">Convolutional Neural Networks II</td>
+        <td class="w3-pale-red"><b>Teaming Due</b></td>
+    </tr>
+
+    <tr>
+        <td>10/13,15</td>
+        <td class="w3-black">Fall Break</td>
+        <td class="w3-pale-yellow">Explain and Visualization</td>        
+        <td class="w3-pale-red"></td>
+    </tr>
+
+    <tr>
+        <td>10/20,22</td>
+        <td class="w3-pale-yellow">Recurrent Neural Networks</td>
+        <td class="w3-pale-yellow">Graph Neural Networks</td>
+        <td class="w3-pale-red"><b>Proposal</b></td>
+    </tr>
+
+    <tr>
+        <td>10/27,29</td>
+        <td class="w3-pale-yellow">Transformers I</td>
+        <td class="w3-pale-yellow">Transformers II</td>
+        <td class="w3-pale-red"></td>
+    </tr>
+
+    <tr>
+        <td>11/3,5</td>
+        <td class="w3-pale-green">Large Language Models I</td>
+        <td class="w3-pale-green">Large Language Models II</td>
+        <td class="w3-pale-red"></td>
+    </tr>
+
+    <tr>
+        <td>11/10,12</td>
+        <td><b>Mid-term Exam</b></td>
+        <td class="w3-pale-green">Multimodal Learning</td>
+        <td class="w3-pale-red"></td>
+    </tr>
+
+    <tr>
+        <td>11/17,19</td>
+        <td class="w3-pale-green">Generative Models I</td>
+        <td class="w3-pale-green">Generative Models II</td>
+        <td class="w3-pale-red"></td>
+    </tr>
+
+    <tr>
+        <td>11/24,26</td>
+        <td class="w3-pale-green">Trustworthy AI</td>
+        <td class="w3-black">Thanksgiving</td>
+        <td class="w3-pale-red"></td>
+    </tr>
+
+    <tr>
+        <td>12/1,3</td>
+        <td class="w3-pale-green">Something Interesting</td>
+        <td class="w3-pale-green">Something Interesting</td>
+        <td class="w3-pale-red"></td>
+    </tr>
+
+    <tr>
+        <td>12/8,10</td>
+        <td><b>Project Presentation I</b></td>
+        <td><b>Project Presentation II</b></td>
+        <td class="w3-pale-red"><b>Final Report</b></td>
+    </tr>
+
+    </table>
+
+<!--
+    <p><b>We see many exciting projects from the students. <a href="https://drive.google.com/drive/folders/1hj2ilLPetINyH88VCvjK781zrSfvlS_D?usp=share_link">You can find a subset of their shared slides here.</a></b></p>
+-->
+
+    <hr>
+
+    <h4>Course Work and Evaluation</h4>
+
+    <ul>
+        <li><b>Class Participation (20%):</b> Throughout the term, we will have a few attendance takings. Besides attending the class, you are expected to actively participate in class discussion to own the full grade.</li>
+        <li><b>Assignments (10%):</b> We will have two assignments throughout the term, but we will not grade them. The assignments aim to familiarize you with the basics of training and testing neural networks.</li>
+        <li><b>Mid-term Exam (30%):</b> We will have a late in-class mid-term exam.</li>
+        <li><b>Final Project (40%):</b> This is a team project (up to 2 students in a team; CSC 445 has higher expectations than CSC 245). You will submit a proposal around mid term. The project presentation and final report are due by the end of the semester.</li>
+    </ul>
+
+    <p><b>Regrading:</b> Any questions about the grading of a piece of work must be raised within one week of the date that the work was returned. In other words, if you do not pick up your work in a timely fashion, you may forfeit your right to question the grading of your work.</p>
+
+    <hr>
+
+    <h4>Textbook and Other Resources</h4>
+    <p>I do not enforce a textbook. However, you may find the following textbooks very helpful: 
+    <ul>
+        <li>Deep Learning by Goodfellow, Bengio and Courville, The MIT Press, 2016 [<a href="https://www.deeplearningbook.org/">link</a>]</li>
+        <li>The Science of Deep Learning by Iddo Drori, Cambridge University Press, 2022 [<a href="https://www.thescienceofdeeplearning.org">link</a>]</li>
+    </ul>
+    <p>There are tons of online materials and courses for learning deep learning. This Github repository <a href="https://github.com/ChristosChristofidis/awesome-deep-learning">awesome-deep-learning</a>, although not up-to-date, is an excellent place to get started. You may also learn from deep learning library tutorials and manuals. However, technologies come and technologies go, but insights stay. Therefore, it is more important to understand the principles behind, and you can quickly master any libraries later if needed.</p>
+
+
+    <hr>
+
+    <h4>Other Policies</h4>
+
+    <p><b>Academic Honesty:</b> All assignments and activities associated with this course must be performed in accordance with the University of Rochester's Academic Honesty Policy. More information is available <a href="http://www.rochester.edu/college/honesty/">here</a>. You are expected to read, understand, and follow the policy.</p>
+
+    <p><b>AI Usage:</b> AI can be a powerful tool for both learning and productivity. You are allowed to use any AI tool in this course, provided that you clearly acknowledge its use and explain how you used it. See the <a href="https://apastyle.org/">APA Style Guide</a> for how to cite AI generated content. Failing to cite verbatim quotes or paraphrased material from a Generative AI tool is considered plagiarism. Note, too, that you are still responsible for the accuracy of the content you submit for this course. Submission of inaccurate or hallucinated content may be considered a form of fabrication and could result in an academic honesty case being filed. If you have any questions about a particular tool or how to use it for this class, please talk to me.</p>
+
+
+    <p><b>Disabilities:</b> Please see me about your required accommodations as early as possible in the term. The University of Rochester respects and welcomes students of all backgrounds and abilities. In the event you encounter any barrier(s) to full participation in this course due to the impact of a disability, please contact the Office of Disability Resources. The access coordinators in the Office of Disability Resources can meet with you to discuss the barriers you are experiencing and explain the eligibility process for establishing academic accommodations. You can reach the Office of Disability Resources at: disability@rochester.edu; (585) 276-5075; Taylor Hall; www.rochester.edu/college/disability.</p>
+
+   
+</div>
+
+                        
+</body>
+</html>
+
+
