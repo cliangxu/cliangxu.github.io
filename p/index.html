@@ -1066,7 +1066,7 @@ Luowei Zhou, <span class="me">Chenliang Xu</span>, Parker Koch, and Jason J. Cor
         document.querySelectorAll('.pub-item').forEach(el => {
             const yearOk  = !selYear | el.dataset.year  === selYear;
             const venueOk = !selVenue | el.dataset.venue === selVenue;
-            const topicOk = !selTopic | el.dataset.topic.split(',').includes(selTopic);
+            const topicOk = !selTopic | (el.dataset.topic || '').split(',').includes(selTopic);
             el.style.display = (yearOk && venueOk && topicOk) ? '' : 'none';
         });
         document.querySelectorAll('.year-heading').forEach(el => {
