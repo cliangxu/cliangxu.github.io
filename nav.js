@@ -36,7 +36,7 @@
     document.currentScript.insertAdjacentHTML('afterend',
         `<div id="site-header">` +
             `<div id="site-nav">` +
-                `<a id="site-name" href="${root}index.html">Chenliang Xu</a>` +
+                `<a id="site-name" href="${root}index.html">Chenliang Xu (徐辰良)</a>` +
                 `<ul class="w3-navbar" id="site-navbar">${lis}</ul>` +
                 `<a href="https://www.rochester.edu" id="ur-logo-link">` +
                     `<img src="${root}UR-logo.png" alt="University of Rochester" id="ur-logo">` +
